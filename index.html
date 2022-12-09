@@ -1,0 +1,133 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="thumb/favicon.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <header>
+        <a class="logo" href="index.html"><img src="thumb/favicon-small.png" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="graphics.html">Graphics</a></li>
+                <li><a href="games.html">Games</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html">Contact</a>
+        <p class="menu cta">Menu</p>
+    </header>
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="art.html">Art</a>
+            <a href="graphics.html">Graphics</a>
+            <a href="games.html">Games</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/mobile.js"></script>
+</body>
+
+<body>
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-image: url("images/bg.png");
+            background-color: #364786;
+        }
+    </style>
+    <link rel="stylesheet" href="css/background.css">
+    <br>
+    <h1 style="text-align:center;font-size: max(5vw,70px);color:#ffffff;padding: max(40px, 5%)">Tsun's Creations</h1>
+    <h1 style="text-align:center;font-size: max(2vw,40px);color:#ffffff;padding: 0 20px;"">The Magic Invisible Switch</h1>
+    <br>
+    <br>
+    <br>
+    <link rel=" stylesheet" href="css/slider.css">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <br>
+        <br>
+        <br>
+        <h1 style="text-align:center;font-size: max(0.5vw,15px);color:#ffffff;padding: 0 20px;"">It Does Nothing!</h1>
+        <br>
+        <br>
+        <br>
+</body>
+
+<style>
+    button {
+        font-family: "Inter", sans-serif;
+        background-color: white;
+        border: none;
+        color: rgb(255, 123, 0);
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0 10px;
+        line-height: 20px;
+    }
+    div {
+        border-radius: 10px;
+    }
+</style>
+
+<script>
+    document.addEventListener('keydown', function (event) {
+        if (event.code === 'Space') {
+            var sound = new Audio('sound.mp3');
+            sound.volume = 0.5;
+            sound.play();
+            var img = document.createElement('img');
+            img.src = 'images/honk.png';
+            img.style.display = 'block';
+            img.style.marginLeft = 'auto';
+            img.style.marginRight = 'auto';
+            document.body.appendChild(img);
+
+            var popup = document.createElement('div');
+            popup.style.position = 'fixed';
+
+            var top = Math.random() * (window.innerHeight - 200);
+            var left = Math.random() * (window.innerWidth - 200);
+            popup.style.top = top + 'px';
+            popup.style.left = left + 'px';
+
+            popup.style.padding = '20px';
+            popup.style.backgroundColor = 'white';
+
+            var button = document.createElement('button');
+            button.innerHTML = 'X';
+            button.style.float = 'right';
+            button.addEventListener('click', function () {
+                document.body.removeChild(popup);
+            });
+
+            popup.innerHTML = 'honk';
+            popup.appendChild(button);
+
+            document.body.appendChild(popup);
+        }
+    });
+</script>
+
+
+</html>
